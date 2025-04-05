@@ -1,0 +1,556 @@
+/*  Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+    
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;  /* Prevents horizontal scroll */
+}
+
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background:black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Logo */
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/*  Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+}
+
+/* HERO SECTION */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    color: #333;
+    border-radius: 10px;
+    text-align: justify;
+
+
+}
+
+/* H1 STYLING */
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+/* HIGHLIGHTED SPAN */
+.hero-content span {
+    color: #007bff;
+}
+
+/* PARAGRAPH STYLING */
+.hero-content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* BUTTON STYLING */
+.btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    
+
+    #hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+/* About Section */
+#about {
+    background-color: #f9f9f9; /* Light gray background for a professional look */
+    padding: 80px 10%;
+    text-align: center;
+
+}
+
+/* Container */
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 70px;
+}
+
+/* Heading */
+.about-container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Styling */
+.about-text {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.about-text span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Download Resume Button */
+.btn1 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: white;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn1:hover {
+    background: #0056b3;
+    box-shadow: 3px 3px 15px rgba(0, 86, 179, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/*  Project Section */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Project Card */
+#projects{
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#projects h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+}
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 5px 4px 5px rgba(48, 10, 118, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    height: 370px;
+
+}
+.project-card h3 {
+    margin-top: 30px;
+}
+.project-card a{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/*  Responsive Project Section */
+@media screen and (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .project-card {
+        height: auto;
+    }
+}
+
+/* General Section Styling */
+.edu-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 10%;
+    background: #f8f9fa;
+}
+
+/* Headings */
+h2, h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* SKILLS SECTION */
+#skills {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); 
+    padding: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 120px;
+}
+
+.skill-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-bar::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: #007bff;
+    border-radius: 5px;
+    animation: fillAnimation 2s ease-in-out forwards;
+}
+
+/* Adjusting widths based on skills */
+.skill-item:nth-child(1) .skill-bar::after { width: 90%; } /* HTML */
+.skill-item:nth-child(2) .skill-bar::after { width: 90%; } /* CSS */
+.skill-item:nth-child(3) .skill-bar::after { width: 70%; } /* JavaScript */
+.skill-item:nth-child(4) .skill-bar::after { width: 50%; } /* React */
+.skill-item:nth-child(5) .skill-bar::after { width: 80%; } /* Media Query */
+
+
+
+
+@media (max-width: 768px){
+    .skills-grid {
+        width: 500px;
+    }
+}
+
+@media (max-width: 426px){
+    .skills-grid {
+        width:auto;
+    }
+}
+
+/* ======================== */
+/* EDUCATION SECTION */
+/* ======================== */
+#education {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); 
+    padding: 50px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edu-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.edu-item h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.edu-item p, .edu-item h5 {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ======================== */
+/* RESPONSIVE DESIGN */
+/* ======================== */
+@media (max-width: 768px) {
+    .edu-skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .edu-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1025px){
+    #education {
+        height: 527px;
+    }
+}
+
+/* ======================== */
+/* CONTACT SECTION */
+/* ======================== */
+#contact {
+    background: #f8f9fa;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* SEND BUTTON */
+.btnn {
+    width: 70px;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnn:hover {
+    background: #0056b3;
+}
+
+/* ======================== */
+/* RESPONSIVE DESIGN */
+/* ======================== */
+@media (max-width: 600px) {
+    .contact-form {
+        width: 90%;
+    }
+}

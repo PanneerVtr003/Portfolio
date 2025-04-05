@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Panneer Selvam</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+                
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Panneer Selvam</span></h1>
+            <p>
+                A passionate Frontend developer with experience in building modern and responsive websites. 
+                I love creating elegant and functional web applications that provide a seamless user experience.
+            </p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    
+                    <p>
+                        My goal is to **transform ideas into reality** by developing high-quality websites that not only look great but also offer smooth user experiences. 
+                        I enjoy solving complex problems and continuously learning new technologies to enhance my skills. 
+                    </p>
+                    <p>
+                        When I’m not coding, you’ll find me exploring **new tech trends, working on side projects, or sharpening my UI/UX skills** to create better web solutions.
+                    </p>
+                    <a href="ATS Resume.pdf" download class="btn1">Download Resume</a>
+                </div>
+        </div>
+        </section>  
+    
+
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="img.jpg/organic.png" alt="Project 1">
+                <h3>Online Organic Food Delivery</h3>
+                <p>Order fresh and organic food online with ease! Enjoy healthy, farm-fresh products delivered straight to your doorstep.🥦🚛</p>
+                <a href="https://yourwebsite.com" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="img.jpg/eventreg.png" alt="Project 2">
+                <h3>Event Registration Form</h3>
+                <p>Effortlessly register for events with our seamless and user-friendly event registration system.</p>
+                <a href="https://panneervtr003.github.io/Event-Registration-Form/" target="_blank">View Project</a>
+            </div> 
+        </div>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="img.jpg/footwear.png" alt="Project 2">
+                <h3>Foot Wears</h3>
+                <p>Step into style with our exclusive footwear collection! Discover trendy, comfortable, and high-quality shoes for every occasion. 👟✨</p>
+                <a href="https://panneervtr003.github.io/Foot-wears/" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="img.jpg/image.png" alt="Project 2">
+                <h3>Image Gallery</h3>
+                <p>Discover our dynamic image gallery showcasing a colorful collection. Enjoy a seamless viewing experience with interactive zoom and hover effects!.</p>
+                <a href="https://panneervtr003.github.io/Gallery/" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="edu-skills">
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Media Query</h3>
+                    <div class="skill-bar">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="education">
+            
+                <h1>Education</h1>
+                <div class="timeline">
+                    <div class="edu-item left">
+                        <h3>SNS College of Engineering</h3>
+                        <p>Bachelor of Science in Computer Science (2022 - 2026)</p>
+                        <p>CGPA 8.03</p>
+                    </div>
+                    <div class="edu-item right">
+                        <h3>Sri Arutsai Vetri Vidyalaya Matric Hr Sec School</h3>
+                        <p>Higher Secondary Education (2018 - 2022)</p>
+                        <h5>HCL - 85%</h5>
+                        <h5>SSCL - 90%</h5>
+                    </div>
+                </div>
+          
+        </section>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+       
+            <form action="https://formspree.io/f/mwplnekg" method="POST"  class="contact-form">
+                <label class="name">
+                    <input type="text" name="name" placeholder="Enter Name">
+                </label>
+                <label class="email">
+                    <input type="email" name="email" placeholder="Enter Email">
+                </label>
+                <label class="message">
+                     <textarea name="message" placeholder="Type here...."></textarea>
+                   </label>
+                   <button class="btnn" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
